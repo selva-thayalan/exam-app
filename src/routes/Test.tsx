@@ -26,6 +26,7 @@ const TestRoute: React.FunctionComponent<TestRouteProps> = () => {
     const onSubmitTest = () => {
         if(window.confirm("Please make sure your answers before submit!")){
             let testid = context.results.length;
+            context.addResult({ name: "Jack", testid, answers: qAnswers });
             //Code to add the test result to context.
             navigate(`/results/${testid}`);
         }
