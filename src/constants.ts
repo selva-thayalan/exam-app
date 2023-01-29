@@ -24,11 +24,14 @@ export interface ITestQuestion {
 
 export type TTestQuestionList = ITestQuestion[]
 
-
+//To minimize the storage in database the result is stored seaparetly from the questions along with question n.o.
 //Answer types used to store the answers separately from the questions so that we can minimize the size of the answer object without the question.
-export type TAnswer = string[]
+export interface IAnswer { 
+    values: string[],
+    questionid: number
+}
 
-export type TAnswers = TAnswer[]
+export type TAnswers = IAnswer[]
 
 export interface ITestResult{
     name: string,//Name of the candidate.
@@ -37,6 +40,13 @@ export interface ITestResult{
 }
 
 export type TTestResults = ITestResult[] //The test can be taken by any number of candidates so we can see all the results as test host in a protected page in the future.
+
+export interface IQuestionOptionProps{
+    options: IQuestionOption[],
+    uId: string,
+    value: string[],
+    onChange: (index: number, option: string) => void
+}
 
 export function getQuestion() : ITestQuestion {
     //This method can be replaced with an API to get question based on the test in the future.
