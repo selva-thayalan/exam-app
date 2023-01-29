@@ -36,7 +36,7 @@ class ApplicationRoute extends React.Component<ApplicationRouteProps, Applicatio
                         <Route path="/test/:testid" element={<TestRoute />}></Route>
                         <Route path="/results">
                             <Route path="" element={<ResultsRoute />}></Route>
-                            <Route path=":testid" element={<ResultRoute />}></Route>
+                            <Route path=":resultid" element={<ResultRoute />}></Route>
                         </Route>
                     </Routes>
                 </Router>
