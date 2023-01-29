@@ -25,7 +25,7 @@ const QuestionCard: React.FunctionComponent<QuestionCardProps> = (props) => {
     return ( 
         <div className="q-card-cont">
             <div className="q-card-question">{props.model.question}</div>
-            <div className="q-card-options">
+            <div className="q-card-options flex">
                 <DynamicComp options={props.model.questionoption} uId={props.model.questionid} value={props.answer.values} onChange={(props.onAnswerChange)}/>
             </div>
         </div>

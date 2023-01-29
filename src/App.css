@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;
+}
+#root{
+    height: 100vh;
+    width: 100vw;
+}
+
+input, button{
+    cursor: pointer;
+}
+
+.f_size{
+    height: 100%;
+    width: 100%;
+}
+
+.flex{
+    display: flex;
+}
+
+.m_auto{
+    margin: auto;
+}
+
+.f_l{
+    float: left;
+}
+
+.f_r{
+    float: right;
+}
+
+.flex_cntr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.t_align_c{
+    text-align: center;
+}
+
+.main-cont{
+    width: 400px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.test-header{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-text{
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.sub-text{
+    font-size: 15px;
+}
+
+.q-card-question{
+    min-height: 50px;
+}
+
+.result-preview .q-card-question{
+    min-height: 30px;
+}
+
+.result-preview .q-card-options{
+    max-width: 300px;
+}
+
+.q-card-options{
+    justify-content: center;
+    flex-direction: column;
+}
+
+.question-nav-cont{
+    margin: 20px;
+}
+
+.q-card-cont{
+    padding: 20px;
+}
+
+.portable-btn{
+    height: 25px;
+    width: fit-content;
+    border-radius: 3px;
+}

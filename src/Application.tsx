@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css';
 import { ITestResult, TTestResults } from './constants';
 import HomeRoute from './routes/Home';
 import TestRoute from './routes/Test';
