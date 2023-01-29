@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import ResultsContext from "../contexts/Results";
 import { ITestQuestion, ITestResult, getQuestion } from "../constants";
 import QuestionCard from "../components/QuestionCard";
@@ -18,6 +18,9 @@ const ResultRoute: React.FunctionComponent<ResultRouteProps> = (props) => {
     return ( 
         <div className="result-preview">
             {tQuestion.questions.map((que, i) => <QuestionCard key={que.questionid} model={que} answer={tResult.answers[i]}/>)}
+            <Link to="/" relative="path">
+                Okay
+            </Link>
         </div>
      );
 }
