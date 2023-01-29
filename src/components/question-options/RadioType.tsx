@@ -8,7 +8,7 @@ const RadioType: React.FunctionComponent<IQuestionOptionProps> = (props) => {
     return (
         <div>
             {props.options.map(option => 
-                <label key={option.optionid}><input type="radio" checked={isChecked(option.optionvalue)} name={props.uId} value={option.optionvalue} onChange={e => props.onChange(0, e.target.value)}/> {option.optionvalue}</label>)}
+                <label key={option.optionid}><input type="radio" checked={isChecked(option.optionvalue)} name={props.uId} value={option.optionvalue} onChange={e => props.onChange?.(0, e.target.value)}/> {option.optionvalue}</label>)}
         </div>
     );
 }

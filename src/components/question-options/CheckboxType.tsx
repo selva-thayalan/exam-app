@@ -8,7 +8,7 @@ const CheckboxType: React.FunctionComponent<IQuestionOptionProps> = (props) => {
     return (
         <div>
             {props.options.map((option, index) =>
-                <label key={option.optionid}><input type="checkbox" checked={isChecked(index)} name={props.uId} onChange={e => props.onChange(index, `${(!isChecked(index))}`)} /> {option.optionvalue}</label>)}
+                <label key={option.optionid}><input type="checkbox" checked={isChecked(index)} name={props.uId} onChange={e => props.onChange?.(index, `${(!isChecked(index))}`)} /> {option.optionvalue}</label>)}
         </div>
     );
 }

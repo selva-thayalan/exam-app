@@ -45,7 +45,7 @@ export interface IQuestionOptionProps{
     options: IQuestionOption[],
     uId: string,
     value: string[],
-    onChange: (index: number, option: string) => void
+    onChange?: (index: number, option: string) => void
 }
 
 export function getQuestion() : ITestQuestion {

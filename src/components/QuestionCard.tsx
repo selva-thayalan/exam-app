@@ -10,7 +10,7 @@ import CheckboxType from "./question-options/CheckboxType";
 interface QuestionCardProps {
     model: IQuestion,
     answer: IAnswer,
-    onAnswerChange: (optIndex: number, value: string) => void
+    onAnswerChange?: (optIndex: number, value: string) => void
 }
 
 const ComponentDict: any = {
